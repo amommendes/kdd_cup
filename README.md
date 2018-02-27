@@ -9,16 +9,17 @@ Churn (wikipedia definition): Churn rate is also sometimes called attrition rate
 Appetency: In our context, the appetency is the propensity to buy a service or a product.
 Up-selling (wikipedia definition): Up-selling is a sales technique whereby a salesman attempts to have the customer purchase more expensive items, upgrades, or other add-ons in an attempt to make a more profitable sale. Up-selling usually involves marketing more profitable services or products, but up-selling can also be simply exposing the customer to other options he or she may not have considered previously. Up-selling can imply selling something additional, or selling something that is more profitable or otherwise preferable for the seller instead of the original sale.
 
-#Evaluation
+# Evaluation
 
 The performances are evaluated according to the arithmetic mean of the AUC for the three tasks (churn, appetency. and up-selling). This is what we call "Score" in the Result page.
 
-#Sensitivity and Specificity
+# Sensitivity and Specificity
 
 The main objective of the challenge is to make good predictions of the target variables. The prediction of each target variable is thought of as a separate classification problem. The results of classification, obtained by thresholding the prediction score, may be represented in a confusion matrix, where tp (true positive), fn (false negative), tn (true negative) and fp (false positive) represent the number of examples falling into each possible outcome:
 
 |---------|---------|--------------------------------|
 |---------|---------|            Prediction          |
+|---------|---------|--------------------------------|
 |---------|---------|   Class+1       | Class+2      |
 |  Truth  |Class +1 |      tp         |    fn        |
 |---------|Class +2 |      fp         |    tn        |
@@ -33,6 +34,6 @@ Sensitivity = tp/pos
 Specificity = tn/neg
 where pos = tp+fn is the total number of positive examples and neg=tn+fp the total number of negative examples.
 
-#AUC
+# AUC
 
 The results will be evaluated with the so-called Area Under Curve (AUC). It corresponds to the area under the curve obtained by plotting sensitivity against specificity by varying a threshold on the prediction values to determine the classification result. The AUC is related to the area under the lift curve and the Gini index used in marketing (Gini = 2 AUC -1). The AUC is calculated using the trapezoid method. In the case when binary scores are supplied for the classification instead of discriminant values, the curve is given by {(0,1), (tn/(tn+fp), tp/(tp+fn)), (1,0)} and the AUC is just the Balanced ACcuracy BAC.
