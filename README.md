@@ -18,8 +18,8 @@ The performances are evaluated according to the arithmetic mean of the AUC for t
 The main objective of the challenge is to make good predictions of the target variables. The prediction of each target variable is thought of as a separate classification problem. The results of classification, obtained by thresholding the prediction score, may be represented in a confusion matrix, where tp (true positive), fn (false negative), tn (true negative) and fp (false positive) represent the number of examples falling into each possible outcome:
 
 |---------|---------|--------------------------------|
-|---------|---------|            Prediction          |
-|---------|---------|--------------------------------|
+|||            Prediction          |
+|---------|---------|-----------------|--------------|
 |---------|---------|   Class+1       | Class+2      |
 |  Truth  |Class +1 |      tp         |    fn        |
 |---------|Class +2 |      fp         |    tn        |
